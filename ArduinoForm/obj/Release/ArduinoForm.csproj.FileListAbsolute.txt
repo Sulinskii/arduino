@@ -1,0 +1,11 @@
+F:\arduino windows form\ArduinoForm\ArduinoForm\bin\Release\ArduinoForm.exe.config
+F:\arduino windows form\ArduinoForm\ArduinoForm\bin\Release\ArduinoForm.exe
+F:\arduino windows form\ArduinoForm\ArduinoForm\bin\Release\ArduinoForm.pdb
+F:\arduino windows form\ArduinoForm\ArduinoForm\obj\Release\ArduinoForm.csproj.AssemblyReference.cache
+F:\arduino windows form\ArduinoForm\ArduinoForm\obj\Release\ArduinoForm.csproj.SuggestedBindingRedirects.cache
+F:\arduino windows form\ArduinoForm\ArduinoForm\obj\Release\ArduinoForm.Form1.resources
+F:\arduino windows form\ArduinoForm\ArduinoForm\obj\Release\ArduinoForm.Properties.Resources.resources
+F:\arduino windows form\ArduinoForm\ArduinoForm\obj\Release\ArduinoForm.csproj.GenerateResource.cache
+F:\arduino windows form\ArduinoForm\ArduinoForm\obj\Release\ArduinoForm.csproj.CoreCompileInputs.cache
+F:\arduino windows form\ArduinoForm\ArduinoForm\obj\Release\ArduinoForm.exe
+F:\arduino windows form\ArduinoForm\ArduinoForm\obj\Release\ArduinoForm.pdb
