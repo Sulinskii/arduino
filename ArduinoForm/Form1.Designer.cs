@@ -53,10 +53,10 @@
             this.v4MinusButton = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.workPage = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.portSelectionButton = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.calibrationPage = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.workPage.SuspendLayout();
             this.SuspendLayout();
@@ -119,7 +119,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(110, 230);
+            this.textBox4.Location = new System.Drawing.Point(110, 229);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(53, 20);
             this.textBox4.TabIndex = 6;
@@ -127,38 +127,39 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(127, 26);
+            this.label1.Location = new System.Drawing.Point(107, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 13);
+            this.label1.Size = new System.Drawing.Size(56, 13);
             this.label1.TabIndex = 7;
-            this.label1.Text = "v1";
+            this.label1.Text = "podajnik 1";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(127, 91);
+            this.label2.Location = new System.Drawing.Point(107, 91);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(19, 13);
+            this.label2.Size = new System.Drawing.Size(56, 13);
             this.label2.TabIndex = 8;
-            this.label2.Text = "v2";
+            this.label2.Text = "podajnik 2";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(127, 157);
+            this.label3.Location = new System.Drawing.Point(107, 157);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(19, 13);
+            this.label3.Size = new System.Drawing.Size(56, 13);
             this.label3.TabIndex = 9;
-            this.label3.Text = "v3";
+            this.label3.Text = "podajnik 3";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(127, 213);
+            this.label4.Location = new System.Drawing.Point(107, 213);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(19, 13);
+            this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 10;
-            this.label4.Text = "v4";
+            this.label4.Text = "podajnik 4";
             // 
             // v1PlusButton
             // 
@@ -192,9 +193,9 @@
             // 
             // v4PlusButton
             // 
-            this.v4PlusButton.Location = new System.Drawing.Point(179, 230);
+            this.v4PlusButton.Location = new System.Drawing.Point(179, 229);
             this.v4PlusButton.Name = "v4PlusButton";
-            this.v4PlusButton.Size = new System.Drawing.Size(25, 20);
+            this.v4PlusButton.Size = new System.Drawing.Size(25, 21);
             this.v4PlusButton.TabIndex = 14;
             this.v4PlusButton.Text = "+";
             this.v4PlusButton.UseVisualStyleBackColor = true;
@@ -254,7 +255,7 @@
             // 
             this.v4MinusButton.Location = new System.Drawing.Point(69, 229);
             this.v4MinusButton.Name = "v4MinusButton";
-            this.v4MinusButton.Size = new System.Drawing.Size(24, 20);
+            this.v4MinusButton.Size = new System.Drawing.Size(24, 22);
             this.v4MinusButton.TabIndex = 20;
             this.v4MinusButton.Text = "-";
             this.v4MinusButton.UseVisualStyleBackColor = true;
@@ -267,11 +268,12 @@
             this.tabControl1.Location = new System.Drawing.Point(0, -3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(513, 286);
+            this.tabControl1.Size = new System.Drawing.Size(529, 305);
             this.tabControl1.TabIndex = 21;
             // 
             // workPage
             // 
+            this.workPage.BackColor = System.Drawing.Color.OldLace;
             this.workPage.Controls.Add(this.panel1);
             this.workPage.Controls.Add(this.onButton);
             this.workPage.Controls.Add(this.v1OffButton);
@@ -299,13 +301,21 @@
             this.workPage.Location = new System.Drawing.Point(4, 22);
             this.workPage.Name = "workPage";
             this.workPage.Padding = new System.Windows.Forms.Padding(3);
-            this.workPage.Size = new System.Drawing.Size(505, 260);
+            this.workPage.Size = new System.Drawing.Size(521, 279);
             this.workPage.TabIndex = 0;
             this.workPage.Text = "praca";
-            this.workPage.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(26, 40);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(28, 210);
+            this.panel1.TabIndex = 21;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // portSelectionButton
             // 
+            this.portSelectionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.portSelectionButton.Location = new System.Drawing.Point(422, 130);
             this.portSelectionButton.Name = "portSelectionButton";
             this.portSelectionButton.Size = new System.Drawing.Size(75, 23);
@@ -326,27 +336,19 @@
             // 
             // calibrationPage
             // 
+            this.calibrationPage.BackColor = System.Drawing.Color.OldLace;
             this.calibrationPage.Location = new System.Drawing.Point(4, 22);
             this.calibrationPage.Name = "calibrationPage";
             this.calibrationPage.Padding = new System.Windows.Forms.Padding(3);
             this.calibrationPage.Size = new System.Drawing.Size(505, 260);
             this.calibrationPage.TabIndex = 1;
             this.calibrationPage.Text = "kalibracja";
-            this.calibrationPage.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(26, 40);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(28, 210);
-            this.panel1.TabIndex = 21;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(513, 281);
+            this.ClientSize = new System.Drawing.Size(527, 300);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
