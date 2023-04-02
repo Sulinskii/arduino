@@ -29,6 +29,10 @@ namespace ArduinoForm
         Graphics graphics3;
         Graphics graphics4;
 
+        Graphics graphics5;
+        Graphics graphics6;
+        Graphics graphics7;
+
         string selectedPort = "";
         string[] ports = new string[0];
 
@@ -40,6 +44,10 @@ namespace ArduinoForm
             graphics2 = panel1.CreateGraphics();
             graphics3 = panel1.CreateGraphics();
             graphics4 = panel1.CreateGraphics();
+
+            graphics5 = panel1.CreateGraphics();
+            graphics6 = panel1.CreateGraphics();
+            graphics7 = panel1.CreateGraphics();
 
             addPortsToList();
             enterTextboxesInitialValues();
@@ -78,10 +86,10 @@ namespace ArduinoForm
                 return;
             }
 
-            serialPort1.Write(textBox1Text);
-            serialPort1.Write(textBox2Text);
-            serialPort1.Write(textBox3Text);
-            serialPort1.Write(textBox4Text);
+            serialPort1.Write(textBox1Text + "\n");
+            serialPort1.Write(textBox2Text + "\n");
+            serialPort1.Write(textBox3Text + "\n");
+            serialPort1.Write(textBox4Text + "\n");
 
             disposeAllGraphics();
             drawAllGraphics();
@@ -100,29 +108,29 @@ namespace ArduinoForm
 
             if (v2 > 0)
             {
-                drawGraphics(greenBrush, graphics2, 69);
+                drawGraphics(greenBrush, graphics2, 86);
             }
             else
             {
-                drawGraphics(redBrush, graphics2, 69);
+                drawGraphics(redBrush, graphics2, 86);
             }
 
             if (v3 > 0)
             {
-                drawGraphics(greenBrush, graphics3, 134);
+                drawGraphics(greenBrush, graphics3, 167);
             }
             else
             {
-                drawGraphics(redBrush, graphics3, 134);
+                drawGraphics(redBrush, graphics3, 167);
             }
 
             if (v4 > 0)
             {
-                drawGraphics(greenBrush, graphics4, 191);
+                drawGraphics(greenBrush, graphics4, 248);
             }
             else
             {
-                drawGraphics(redBrush, graphics4, 191);
+                drawGraphics(redBrush, graphics4, 248);
             }
         }
 
@@ -230,7 +238,7 @@ namespace ArduinoForm
             v1 = 0;
             String v1String = "v1" + v1.ToString();
             textBox1.Text = v1.ToString();
-            serialPort1.Write(v1String);
+            serialPort1.Write(v1String + "\n");
         }
 
         private void v2OffButton_Click(object sender, EventArgs e)
@@ -242,12 +250,12 @@ namespace ArduinoForm
             }
 
             graphics.Dispose();
-            drawGraphics(redBrush, graphics, 69);
+            drawGraphics(redBrush, graphics, 86);
 
             v2 = 0;
             String v2String = "v2" + v2.ToString();
             textBox2.Text = v2.ToString();
-            serialPort1.Write(v2String);
+            serialPort1.Write(v2String + "\n");
         }
 
         private void v3OffButton_Click(object sender, EventArgs e)
@@ -259,12 +267,12 @@ namespace ArduinoForm
             }
 
             graphics3.Dispose();
-            drawGraphics(redBrush, graphics3, 134);
+            drawGraphics(redBrush, graphics3, 167);
 
             v3 = 0;
             String v3String = "v3" + v3.ToString();
             textBox3.Text = v3.ToString();
-            serialPort1.Write(v3String);
+            serialPort1.Write(v3String + "\n");
         }
 
         private void v4OffButton_Click(object sender, EventArgs e)
@@ -277,12 +285,12 @@ namespace ArduinoForm
             }
 
             graphics4.Dispose();
-            drawGraphics(redBrush, graphics4, 191);
+            drawGraphics(redBrush, graphics4, 248);
 
             v4 = 0;
             String v4String = "v4" + v4.ToString();
             textBox4.Text = v4.ToString();
-            serialPort1.Write(v4String);
+            serialPort1.Write(v4String + "\n");
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -359,12 +367,21 @@ namespace ArduinoForm
             disposeAllGraphics();
 
             drawGraphics(redBrush, graphics, 5);
-            drawGraphics(redBrush, graphics2, 69);
-            drawGraphics(redBrush, graphics3, 134);
-            drawGraphics(redBrush, graphics4, 191);
+            drawGraphics(redBrush, graphics2, 86);
+            drawGraphics(redBrush, graphics3, 167);
+            drawGraphics(redBrush, graphics4, 248);
+
+            drawGraphics(redBrush, graphics5, 343);
+            drawGraphics(redBrush, graphics6, 413);
+            drawGraphics(greenBrush, graphics7, 483);
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
