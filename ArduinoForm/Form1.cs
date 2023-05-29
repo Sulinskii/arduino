@@ -373,7 +373,7 @@ namespace ArduinoForm
 
             drawGraphics(redBrush, graphics5, 343);
             drawGraphics(redBrush, graphics6, 413);
-            drawGraphics(greenBrush, graphics7, 483);
+            drawGraphics(redBrush, graphics7, 483);
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -384,6 +384,90 @@ namespace ArduinoForm
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (serialPort1.IsOpen == false)
+            {
+                displayAlert("Błąd", "Wybierz port");
+                return;
+            }
+
+            graphics.Dispose();
+            drawGraphics(redBrush, graphics, 343);
+
+            serialPort1.Write("w1off \n");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (serialPort1.IsOpen == false)
+            {
+                displayAlert("Błąd", "Wybierz port");
+                return;
+            }
+
+            graphics.Dispose();
+            drawGraphics(greenBrush, graphics, 343);
+
+            serialPort1.Write("w1on \n");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (serialPort1.IsOpen == false)
+            {
+                displayAlert("Błąd", "Wybierz port");
+                return;
+            }
+
+            graphics.Dispose();
+            drawGraphics(greenBrush, graphics, 413);
+
+            serialPort1.Write("w2on \n");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (serialPort1.IsOpen == false)
+            {
+                displayAlert("Błąd", "Wybierz port");
+                return;
+            }
+
+            graphics.Dispose();
+            drawGraphics(redBrush, graphics, 413);
+
+            serialPort1.Write("w2off \n");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (serialPort1.IsOpen == false)
+            {
+                displayAlert("Błąd", "Wybierz port");
+                return;
+            }
+
+            graphics.Dispose();
+            drawGraphics(greenBrush, graphics, 483);
+
+            serialPort1.Write("w3on \n");
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (serialPort1.IsOpen == false)
+            {
+                displayAlert("Błąd", "Wybierz port");
+                return;
+            }
+
+            graphics.Dispose();
+            drawGraphics(redBrush, graphics, 483);
+
+            serialPort1.Write("w3off \n");
         }
     }
 }
